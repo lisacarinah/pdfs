@@ -1,0 +1,25 @@
+Bearbeite die index.html folgendermaßen:
+
+Im Header befindet sich 
+  ein Logo
+  eine Navigation (About, Service, Contact)
+    -> diese Seiten anlegen und darauf verlinken
+    -> Fügt einfach eine <h1> mit dem Seitentitel hinzu
+    
+Unter dem Header soll ein Hintergrundbild eingefügt werden. (width: 100%; height: 500px)
+Dieses Hintergrundbild soll fixiert werden, sodass ein schöner scrolleffekt entsteht (background-attachment)
+
+Unter dem Hintergrundbild sollen 2 Bereiche eingefügt werden (main)
+
+1. Bereich
+  Bild mit Text darunter
+  
+2. Bereich
+  Text mit Liste
+  In diesem Text sollen sich mindestens 2 Links befinden. 
+  
+Jeder dieser Bereiche soll farbig hinterlegt werden.
+
+Zum Schluss kommt der Footer. Er enhält wieder eine Navigation mit Contact, Imprint und Privacy Policy (Verlinkung einfach href='#')
+
+Style diese Seite so wie sie dir gefällt :)
