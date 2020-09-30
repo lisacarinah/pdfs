@@ -4,14 +4,15 @@ public class Main {
         // Folgende Zahlenfolge soll auf dem Terminal ausgegeben werden:
         // 1 3 5 7 9 11 13 15 17
 
+
         ////// Exercise 2: Arbeiten mit Datentypen
         int a = 1;
         String b = "2";
         float c = 3.f, d = 4.f;
         // Berechne:
         // float e = a * c;
-        // float d = a * b + c * d;
-        // int f = a + b + c + d;
+        // float h = a * b + c * d;
+        // int f = a + b + c + h;
         // Tipp: Achte auf korrekte Typkonvertierung.
         // Ein float kann nach int folgendermaßen konvertiert werden:
         int g = (int) c;
