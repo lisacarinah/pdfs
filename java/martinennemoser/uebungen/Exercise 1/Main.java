@@ -52,8 +52,15 @@ public class Main {
         // 1 4 6
         // 8 10 12
         // 14 16 18
-        // Tipp: Du benötigst dazu zwei ineinander geschachtelte Schleifen
-
+        // Tipp: Du kannst das mit einer Schleife oder zwei
+		// ineinander geschachtelten Schleifen lösen
+		
+		////// Exercise 5:
+        // Erzeuge auf der Konsole folgendes Muster:
+		// XOOOOOX
+        // OXOOOXO
+		// OOXOXOO
+		// OOOXOOO
 
 
 
