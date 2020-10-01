@@ -55,12 +55,13 @@ public class Main {
         // Tipp: Du kannst das mit einer Schleife oder zwei
 		// ineinander geschachtelten Schleifen lösen
 		
-		////// Exercise 5:
+	////// Exercise 5:
         // Erzeuge auf der Konsole folgendes Muster:
-		// XOOOOOX
+	// XOOOOOX
         // OXOOOXO
-		// OOXOXOO
-		// OOOXOOO
+	// OOXOXOO
+	// OOOXOOO
+        // Tipp: Die X sind in V-Form angeordnet
 
 
 
