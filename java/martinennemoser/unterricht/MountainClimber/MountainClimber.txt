@@ -1,0 +1,19 @@
+Für die nächste Schatzsuche muss Bonny Brain und die Crew über Berge und Hügel gehen. Sie bekommt vorher die Höhenmeter mitgeteilt und möchte sich vorher einen Eindruck vom Profil machen.
+
+Aufgabe:
+
+Schreibe ein Programm, das ein Array mit Höhenmetern in eine ASCII-Darstellung umsetzt.
+
+Die Höhe soll darstellt werden über ein Multiplikationszeichen * in genau dieser Höhe von einer Grundlinie. Die Höhen können beliebig sein, aber nicht negativ.
+
+Beispiel:
+
+Das Array { 0, 1, 1, 2, 2, 3, 3, 3, 4, 5, 4, 3, 2, 2, 1, 0 } soll darstellt werden als:
+
+5          *
+4         * *
+3      ***   *
+2    **       **
+1  **           *
+0 *              *
+Die 1. Spalte dient der Verdeutlichung und muss nicht in der Lösung umgesetzt werden.
