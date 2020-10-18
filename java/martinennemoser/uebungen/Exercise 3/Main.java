@@ -18,7 +18,7 @@ public class Main {
 
        ///// 2. Sortieren
        // Schreibe ein Programm, welches 5 verschiedene Wörter, welche der Benutzer
-       // eingeben kann einliest und anschließend sortiert.
+       // eingeben kann einliest und anschließend alphabetisch sortiert.
        // Wie wir gelernt haben, können Strings folgendermaßen eingelesen werden:
        // Scanner scan = new Scanner(System.in);
        // String wort = scan.nextLine();
