@@ -27,7 +27,7 @@ public class Main {
        // Sortiere dieses Array, indem du den Bubble-Sort Algorithmus implementierst.
        // Tipp: Du wirst für deinen Bubble-Sort Algorithmus folgendes benötigen, um
        // feststellen zu können, ob 2 Wörter getauscht werden müssen:
-       // if (woerter[i].compareTo(woerter[j])>0)
+       // if (woerter[i].compareTo(woerter[j])<0)
        // {
        //    // Tausche woerter[i] und woerter[j] hier (mit einer Hilfsvariable)
        // }
