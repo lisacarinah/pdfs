@@ -25,16 +25,16 @@ public class Main {
 
         ////// Exercise 3: Element zurückgeben
         // Schreibe eine Funktion, die wie folgt aufgerufen wird:
-        // String name = nameZurueckgeben(4);
+        // String name = nameZurueckgeben(namenListe, 4);
         // Die Funktion nimmt den Index der namenListe entgegen und gibt
         // den passenden Namen zurück. Prüfe, ob der Index gültig ist.
         // Wenn der Index nicht im gültigen Bereich ist, gib
         // als Fehlermeldung zurück: "Index ist nicht gültig."
         // Z.B. wenn wir die Liste aus Exercise 2 nehmen:
-        // String name = nameZurueckgeben(4); => name wäre hier: Max
-        // String name = nameZurueckgeben(0); => name wäre hier: Anna
-        // String name = nameZurueckgeben(-1); => name wäre hier: Index ist nicht gültig.
-        // String name = nameZurueckgeben(8); => name wäre hier: Index ist nicht gültig.
+        // String name = nameZurueckgeben(namenListe, 4); => name wäre hier: Max
+        // String name = nameZurueckgeben(namenListe, 0); => name wäre hier: Anna
+        // String name = nameZurueckgeben(namenListe, -1); => name wäre hier: Index ist nicht gültig.
+        // String name = nameZurueckgeben(namenListe, 8); => name wäre hier: Index ist nicht gültig.
 
         ////// Exercise 4: Erzeuge ein HashSet mit dem Namen "farbenSet".
         // Füge in farbenSet mehrere Farben als Strings ein.
