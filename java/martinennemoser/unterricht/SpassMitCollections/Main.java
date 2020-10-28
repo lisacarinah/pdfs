@@ -106,6 +106,7 @@ public class Main {
         // liste1: "affe", "banane", "tisch"
         // liste2: "glas", "stuhl", "block"
 
+        System.out.println("Wörter einfügen");
         String[] arr1 = {"affe", "banane", "tisch", "stuhl", "monitor", "block"};
 
         ArrayList<String> stringListe = new ArrayList<>(9);
@@ -114,13 +115,14 @@ public class Main {
         stringListe.add(3, "glas");
         stringListe.remove(5);
         //andere Möglichkeit: stringListe.remove(new String("monitor"));
-        List<String> stringListe1 = stringListe.subList(0, 3);
+        List<String> stringListe1 = stringListe.subList(0, 3); // startindex = 0, endindex = 3 - 1
         List<String> stringListe2 = stringListe.subList(3, 6);
         System.out.println(stringListe1);
         System.out.println(stringListe2);
 
-        // Nichtveränderbare Liste (egal welcher Datentype)
+        // Nichtveränderbare (immutable) Liste (egal welcher Datentype)
         List<Float> floatListe = List.of(3.4f, 5.3f, 4.5f);
+        // geht nicht: floatListe.set(1, 6.4f);
         // geht nicht: floatListe.add(3.3f);
 
         System.out.println("#### Arraylist abgeschlossen ####");

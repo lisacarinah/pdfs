@@ -1,5 +1,5 @@
 public class Main {
-    public static void Main(String args) {
+    public static void main(String[] args) {
         ////// Exercise 1: Erzeugen einer Liste
         // Erzeuge eine Liste mit dem Namen "namenListe", welche Personennamen
         // (welche Strings sind) speichern soll.
