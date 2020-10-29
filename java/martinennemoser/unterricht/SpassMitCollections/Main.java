@@ -30,6 +30,7 @@ public class Main {
         liste.add(10);
         liste.add(8);
         liste.add(11);
+
         System.out.println(liste);
         liste.add(12);
         System.out.println(liste);
@@ -99,6 +100,18 @@ public class Main {
         List<Integer> neueListe = List.of(3, 5, 9, 11);
         System.out.println(neueListe);
 
+        // ArrayList iterieren
+        for(int i = 0; i < liste.size(); i++) {
+            int element = liste.get(i);
+        }
+
+        // ArrayList iterieren mit Iterator
+        Iterator<Integer> iterator = liste.iterator();
+        while(iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+
 
         // "affe", "banane", "tisch", "stuhl", "monitor", "block"
         // "affe", "banane", "tisch", "glas", "stuhl", "monitor", "block"
@@ -166,6 +179,18 @@ public class Main {
         // contains ist sehr schnell, weil suchen in HashSets sehr schnell ist
         boolean result = hashSet.contains(45);
         System.out.println(result);
+
+        // HashSet iterieren
+        //for(int i = 0; i < hashSet.size(); i++) {
+        //    // geht nicht: int element = hashSet.get(i);
+        //}
+
+        // stattdessen brauchen wir einen Iterator
+        Iterator<Integer> iterator = hashSet.iterator();
+        while (iterator.hasNext()) {
+            int element = iterator.next();
+            System.out.println(element);
+        }
     }
 
     public static int[] arrayVergrößern(int[] arrayAlt, int zahl){
