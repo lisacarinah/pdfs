@@ -48,6 +48,7 @@ public class Main {
         korb.zeigeObst();
 
         Tisch tisch = new Tisch();
+        tisch.hinzufuegen(korb);
         tisch.holeBananeAusMain(banane);
         tisch.erzeugeKorbMagisch();
     }
