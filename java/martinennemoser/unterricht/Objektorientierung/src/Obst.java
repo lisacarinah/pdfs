@@ -8,11 +8,11 @@ public class Obst {
     // Ist eine Funktion (Methode), welche keine Rückgabetype hat
     // und gleich heißen muss wie die Klasse
     public Obst(String name, String farbe, float groesse, Geschmack geschmack, boolean istBio) {
-        Name = name;
         Farbe = farbe;
         Groesse = groesse;
         obstGeschmack = geschmack;
         IstBio = istBio;
+        Name = name;
     }
 
     // Felder (Attribut der Klasse)
@@ -31,9 +31,10 @@ public class Obst {
         System.out.println("Landet im Mixer.");
     }
 
-    void essen() {
+    void essen(int zeitdauer) {
         System.out.println("Wird gegessen.");
         System.out.println("Obst ist " + obstGeschmack);
+        System.out.println("Habe " + zeitdauer + " Minuten für das Essen für die Frucht " + Name + " gebraucht.");
 
     }
 

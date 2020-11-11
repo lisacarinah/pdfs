@@ -27,7 +27,7 @@ public class Tisch {
     public void erzeugeKorbMagisch() {
         b.zeigeMich();
         Korb magischerKorb = new Korb();
-        Obst obst = new Obst("Magische Marille", "orange", 20, Obst.Geschmack.SEHR_LECKER, true);
+        Obst obst = new Obst( "Marille", "orange", 20, Obst.Geschmack.SEHR_LECKER, true);
         magischerKorb.hinzufuegen(obst);
         magischerKorb.hinzufuegen(b);
         magischerKorb.zeigeObst();
