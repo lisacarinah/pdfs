@@ -8,6 +8,12 @@ public class Flughafen {
     // Methoden
     // Flugzeug Landet
     // Flugzeug hebt ab
+
     // Person betritt Flughafen
+    public void personBetrittFlughafenHalle(Person person) {
+        person.Status = Person.PersonStatus.IST_IN_HALLE;
+    }
+
+
     // Person verlässt flughafen
 }
