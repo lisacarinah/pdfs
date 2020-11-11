@@ -7,7 +7,8 @@ public class Obst {
     // Konstruktor:
     // Ist eine Funktion (Methode), welche keine Rückgabetype hat
     // und gleich heißen muss wie die Klasse
-    public Obst(String farbe, float groesse, Geschmack geschmack, boolean istBio) {
+    public Obst(String name, String farbe, float groesse, Geschmack geschmack, boolean istBio) {
+        Name = name;
         Farbe = farbe;
         Groesse = groesse;
         obstGeschmack = geschmack;
@@ -21,6 +22,7 @@ public class Obst {
     float Groesse; // in cm
     boolean IstBio;
     String Herkunftsland;
+    String Name;
 
 
 

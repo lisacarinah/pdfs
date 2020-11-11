@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        // 3 Objekte der Klasse Obst
-        Obst banane = new Obst("gelb", 20, Obst.Geschmack.SEHR_LECKER, true);
-        Obst apfel = new Obst("rot", 10, Obst.Geschmack.GRAUSIG, false);
-        Obst birne = new Obst("grün", 10, Obst.Geschmack.MAESSIG, true);
+        // 3 Objekte (Instanzen) der Klasse Obst
+        Obst banane = new Obst("banane", "gelb", 20, Obst.Geschmack.SEHR_LECKER, true);
+        Obst apfel = new Obst("apfel", "rot", 10, Obst.Geschmack.GRAUSIG, false);
+        Obst birne = new Obst("birne", "grün", 10, Obst.Geschmack.MAESSIG, true);
 
         System.out.println(banane.Farbe);
         System.out.println(apfel.Farbe);
@@ -35,5 +36,19 @@ public class Main {
         banane.zeigeMich();
         apfel.zeigeMich();
         birne.zeigeMich();
+
+        // Obst zum Korb hinzufügen
+
+        // Objekt erzeugen
+        Korb korb = new Korb();
+        korb.hinzufuegen(banane);
+        korb.hinzufuegen(apfel);
+        korb.hinzufuegen(birne);
+
+        korb.zeigeObst();
+
+        Tisch tisch = new Tisch();
+        tisch.holeBananeAusMain(banane);
+        tisch.erzeugeKorbMagisch();
     }
 }
