@@ -1,3 +1,5 @@
+package obst;
+
 import java.util.ArrayList;
 
 public class Korb {
@@ -19,7 +21,7 @@ public class Korb {
     }
 
     public void zeigeObst() {
-        System.out.println("Zeige Obst im Korb:");
+        System.out.println("Zeige obst.Obst im obst.Korb:");
         for(int i = 0; i < obstListe.size(); i++) {
             System.out.println(obstListe.get(i));
         }

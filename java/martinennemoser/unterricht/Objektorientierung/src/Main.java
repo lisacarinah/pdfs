@@ -1,15 +1,20 @@
-import java.util.Scanner;
+import kaffeemaschine.Kaffeemaschine;
+import obst.Korb;
+import obst.Obst;
+import obst.Tisch;
 
 public class Main {
 
     public static void main(String[] args) {
+
+        // ####### BEISPIEL OBST ################
+        System.out.println("####### BEISPIEL OBST ################");
         // 3 Objekte (Instanzen) der Klasse Obst
-        Obst banane = new Obst("Banane", "gelb", 20, Obst.Geschmack.SEHR_LECKER, true);
+        Obst banane = new Obst("obst1", "gelb", 20, Obst.Geschmack.SEHR_LECKER, true);
         Obst apfel = new Obst( "Apfel", "rot", 10, Obst.Geschmack.GRAUSIG, false);
         Obst birne = new Obst( "Birne", "grün", 10, Obst.Geschmack.MAESSIG, true);
 
         banane.essen(1);
-        apfel.essen(3);
 
         System.out.println(banane.Farbe);
         System.out.println(apfel.Farbe);
@@ -54,5 +59,17 @@ public class Main {
         tisch.hinzufuegen(korb);
         tisch.holeBananeAusMain(banane);
         tisch.erzeugeKorbMagisch();
+
+        // ####### BEISPIEL KAFFEEMASCHINE ################
+        System.out.println("####### BEISPIEL KAFFEEMASCHINE ################");
+        // Beispiel wie man auf KNOEPFE zugreift
+        Kaffeemaschine.KNOPF x = Kaffeemaschine.KNOPF.ESPRESSO;
+
+        Kaffeemaschine kaffeemaschine = new Kaffeemaschine(0, 0, false,false);
+        kaffeemaschine.kaffeeEinfüllen(3);
+        kaffeemaschine.wasserEinfüllen(2);
+        kaffeemaschine.stromZustand(true);
+        kaffeemaschine.kaffeeMachen(Kaffeemaschine.KNOPF.SCHWARZ);
+        kaffeemaschine.kaffeeEntnehmen();
     }
 }

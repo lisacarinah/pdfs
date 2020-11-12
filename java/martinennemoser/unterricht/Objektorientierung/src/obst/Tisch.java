@@ -1,3 +1,5 @@
+package obst;
+
 public class Tisch {
 
     Korb k;

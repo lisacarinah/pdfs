@@ -1,5 +1,7 @@
+package obst;
+
 public class Obst {
-    enum Geschmack {
+    public enum Geschmack {
         SEHR_LECKER,
         MAESSIG,
         GRAUSIG
@@ -16,39 +18,39 @@ public class Obst {
     }
 
     // Felder (Attribut der Klasse)
-    String Farbe;
-    Geschmack obstGeschmack;
-    int Qualitaet; //1-5 (1 ist sehr gut, 5 ist schlecht)
-    float Groesse; // in cm
-    boolean IstBio;
-    String Herkunftsland;
-    String Name;
+    public String Farbe;
+    public Geschmack obstGeschmack;
+    public int Qualitaet; //1-5 (1 ist sehr gut, 5 ist schlecht)
+    public float Groesse; // in cm
+    public boolean IstBio;
+    public String Herkunftsland;
+    public String Name;
 
 
 
     // Methoden
-    void mixen() {
+    public void mixen() {
         System.out.println("Landet im Mixer.");
     }
 
-    void essen(int zeitdauer) {
+    public void essen(int zeitdauer) {
         System.out.println("Wird gegessen.");
-        System.out.println("Obst ist " + obstGeschmack);
+        System.out.println("obst.Obst ist " + obstGeschmack);
         System.out.println("Habe " + zeitdauer + " Minuten für das Essen für die Frucht " + Name + " gebraucht.");
 
     }
 
-    void verkochen() {
+    public void verkochen() {
         mixen();
         System.out.println("Wird verkocht.");
     }
 
-    void vergroessern(int faktor) {
+    public void vergroessern(int faktor) {
         Groesse = Groesse * faktor;
         System.out.println("Neue Groesse: " + Groesse);
     }
 
-    void zeigeMich() {
+    public void zeigeMich() {
         System.out.println(this);
     }
 }
