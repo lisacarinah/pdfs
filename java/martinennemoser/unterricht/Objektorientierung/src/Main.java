@@ -10,7 +10,7 @@ public class Main {
         // ####### BEISPIEL OBST ################
         System.out.println("####### BEISPIEL OBST ################");
         // 3 Objekte (Instanzen) der Klasse Obst
-        Obst banane = new Obst("obst1", "gelb", 20, Obst.Geschmack.SEHR_LECKER, true);
+        Obst banane = new Obst("Banane", "gelb", 20, Obst.Geschmack.SEHR_LECKER, true);
         Obst apfel = new Obst( "Apfel", "rot", 10, Obst.Geschmack.GRAUSIG, false);
         Obst birne = new Obst( "Birne", "grün", 10, Obst.Geschmack.MAESSIG, true);
 
@@ -59,6 +59,15 @@ public class Main {
         tisch.hinzufuegen(korb);
         tisch.holeBananeAusMain(banane);
         tisch.erzeugeKorbMagisch();
+
+        // Ausgabe des Namens des Obsts
+        System.out.println("Ich bin eine(e) " + banane.Name);
+        System.out.println("Ich bin eine(e) " + banane.getName());
+
+        System.out.println("Ich bin eine(e) " + banane);
+        // wird so nie gemacht
+        System.out.println("Ich bin eine(e) " + banane.toString());
+
 
         // ####### BEISPIEL KAFFEEMASCHINE ################
         System.out.println("####### BEISPIEL KAFFEEMASCHINE ################");

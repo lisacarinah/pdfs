@@ -1,5 +1,7 @@
 package obst;
 
+import java.util.Objects;
+
 public class Obst {
     public enum Geschmack {
         SEHR_LECKER,
@@ -52,5 +54,14 @@ public class Obst {
 
     public void zeigeMich() {
         System.out.println(this);
+    }
+
+    public String getName() {
+        return this.Name;
+    }
+
+    @Override
+    public String toString() {
+        return this.Name;
     }
 }
