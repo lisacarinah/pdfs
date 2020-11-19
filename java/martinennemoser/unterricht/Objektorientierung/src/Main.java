@@ -1,8 +1,5 @@
 import kaffeemaschine.Kaffeemaschine;
-import kraftfahrzeug.ElektroAuto;
-import kraftfahrzeug.Kraftfahrzeug;
-import kraftfahrzeug.LKW;
-import kraftfahrzeug.PKW;
+import kraftfahrzeug.*;
 import obst.Korb;
 import obst.Obst;
 import obst.Tisch;
@@ -18,11 +15,23 @@ public class Main {
 
         // komplexe Datentypen: String, Klassen, Arrays
 
+        // Kraftfahrzeug erstellen
+        Kraftfahrzeug kraftfahrzeug = new Kraftfahrzeug("Neues Kraftfahrzeug.");
+        kraftfahrzeug.fahren();
+
+        ElektrischerLKW elektrischerLKW = new ElektrischerLKW();
+        elektrischerLKW.fahren();
+
         LKW man = new LKW("man");
         man.fahren();
 
         PKW vw = new PKW("vw");
         vw.fahren();
+
+        PKW bmw = new PKW("bmw");
+        bmw.fahren();
+        // Geht nicht, da Typencode protected
+        // System.out.println("Der Typencode unseres BMWs lautet " + bmw.Typencode);
 
         ElektroAuto teslaModelS = new ElektroAuto("Tesla Model S");
         ArrayList<Kraftfahrzeug> fuhrPark = new ArrayList<Kraftfahrzeug>();

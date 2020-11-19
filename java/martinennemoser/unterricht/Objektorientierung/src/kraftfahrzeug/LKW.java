@@ -4,7 +4,11 @@ package kraftfahrzeug;
 public class LKW extends Kraftfahrzeug {
     public LKW(String name) {
         super(name);
+        super.Typencode = "984";
     }
 
+    protected void tuerSchliessen() {
+
+    }
 
 }

@@ -1,7 +1,8 @@
 package kraftfahrzeug;
 
 public class Kraftfahrzeug {
-    String Name;
+    public String Name;
+    String Typencode;
     public Kraftfahrzeug(String name) {
         this.Name = name;
     }
@@ -26,6 +27,7 @@ public class Kraftfahrzeug {
     }
 
     public void warten() {
-        System.out.println("Fahren");
+        System.out.println("Bringe Auto in die Werkstätte...");
+        System.out.println("Der Typencode lautet " + Typencode);
     }
 }
