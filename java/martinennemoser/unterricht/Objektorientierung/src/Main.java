@@ -1,11 +1,51 @@
 import kaffeemaschine.Kaffeemaschine;
+import kraftfahrzeug.ElektroAuto;
+import kraftfahrzeug.Kraftfahrzeug;
+import kraftfahrzeug.LKW;
+import kraftfahrzeug.PKW;
 import obst.Korb;
 import obst.Obst;
 import obst.Tisch;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
+        // ####### BEISPIEL KRAFTFAHRZEUG (Vererbung) ################
+
+        // primitive datentypen: int, float, double, long, short, byte
+
+        // komplexe Datentypen: String, Klassen, Arrays
+
+        LKW man = new LKW("man");
+        man.fahren();
+
+        PKW vw = new PKW("vw");
+        vw.fahren();
+
+        ElektroAuto teslaModelS = new ElektroAuto("Tesla Model S");
+        ArrayList<Kraftfahrzeug> fuhrPark = new ArrayList<Kraftfahrzeug>();
+        fuhrPark.add(man);
+        fuhrPark.add(vw);
+        fuhrPark.add(teslaModelS);
+        System.out.println("Nun folgt die Schleife:");
+        for(int i = 0; i < fuhrPark.size(); i++) {
+            // Gib Name aus
+            System.out.println(fuhrPark.get(i));
+
+            // Betanke Kraftfahrzeug
+            Kraftfahrzeug fahrzeug = fuhrPark.get(i);
+
+            if(!(fahrzeug instanceof ElektroAuto)) {
+                fahrzeug.benzinTanken();
+            }
+        }
+
+        ElektroAuto porsche = new ElektroAuto("Porsche");
+        porsche.benzinTanken();
+
+
 
         // ####### BEISPIEL OBST ################
         System.out.println("####### BEISPIEL OBST ################");
