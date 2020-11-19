@@ -2,9 +2,25 @@ package kraftfahrzeug;
 
 public class Kraftfahrzeug {
     public String Name;
-    String Typencode;
+    private String Typencode;
+
     public Kraftfahrzeug(String name) {
         this.Name = name;
+        this.Typencode = "000";
+    }
+
+    // Überladener Konstruktor
+    public Kraftfahrzeug(String name, String typencode) {
+        this.Name = name;
+        this.Typencode = typencode;
+    }
+
+    public Kraftfahrzeug(float x) {
+
+    }
+
+    public Kraftfahrzeug(int y) {
+
     }
 
     @Override

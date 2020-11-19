@@ -5,6 +5,7 @@ import obst.Obst;
 import obst.Tisch;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -18,6 +19,9 @@ public class Main {
         // Kraftfahrzeug erstellen
         Kraftfahrzeug kraftfahrzeug = new Kraftfahrzeug("Neues Kraftfahrzeug.");
         kraftfahrzeug.fahren();
+
+        Kraftfahrzeug kraftfahrzeug2 = new Kraftfahrzeug(10);
+        kraftfahrzeug2.warten();
 
         ElektrischerLKW elektrischerLKW = new ElektrischerLKW();
         elektrischerLKW.fahren();
@@ -33,7 +37,7 @@ public class Main {
         // Geht nicht, da Typencode protected
         // System.out.println("Der Typencode unseres BMWs lautet " + bmw.Typencode);
 
-        ElektroAuto teslaModelS = new ElektroAuto("Tesla Model S");
+        ElektroAuto teslaModelS = new ElektroAuto();
         ArrayList<Kraftfahrzeug> fuhrPark = new ArrayList<Kraftfahrzeug>();
         fuhrPark.add(man);
         fuhrPark.add(vw);
@@ -51,7 +55,7 @@ public class Main {
             }
         }
 
-        ElektroAuto porsche = new ElektroAuto("Porsche");
+        ElektroAuto porsche = new ElektroAuto();
         porsche.benzinTanken();
 
 

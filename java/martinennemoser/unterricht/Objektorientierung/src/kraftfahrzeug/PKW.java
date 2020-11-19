@@ -7,6 +7,6 @@ public class PKW extends Kraftfahrzeug {
         super(name);
         // Überschreibt den Wert von Name der Elternklasse
         super.Name = "audi";
-        super.Typencode = "124";
+        //super.Typencode = "124";
     }
 }
