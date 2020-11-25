@@ -4,6 +4,8 @@ import obst.Korb;
 import obst.Obst;
 import obst.Tisch;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,11 +19,13 @@ public class Main {
         // komplexe Datentypen: String, Klassen, Arrays
 
         // Kraftfahrzeug erstellen
-        Kraftfahrzeug kraftfahrzeug = new Kraftfahrzeug("Neues Kraftfahrzeug.");
-        kraftfahrzeug.fahren();
-
-        Kraftfahrzeug kraftfahrzeug2 = new Kraftfahrzeug(10);
-        kraftfahrzeug2.warten();
+//        Kraftfahrzeug kraftfahrzeug = new Kraftfahrzeug("Neues Kraftfahrzeug");
+//        kraftfahrzeug.fahren("schnell");
+//
+//        System.out.println(kraftfahrzeug.toString());
+//
+//        Kraftfahrzeug kraftfahrzeug2 = new Kraftfahrzeug(10);
+//        kraftfahrzeug2.warten();
 
         ElektrischerLKW elektrischerLKW = new ElektrischerLKW();
         elektrischerLKW.fahren();
@@ -38,6 +42,7 @@ public class Main {
         // System.out.println("Der Typencode unseres BMWs lautet " + bmw.Typencode);
 
         ElektroAuto teslaModelS = new ElektroAuto();
+        teslaModelS.fahren(1);
         ArrayList<Kraftfahrzeug> fuhrPark = new ArrayList<Kraftfahrzeug>();
         fuhrPark.add(man);
         fuhrPark.add(vw);

@@ -11,4 +11,18 @@ public class LKW extends Kraftfahrzeug {
 
     }
 
+    @Override
+    public void fahren(int x) {
+
+    }
+
+    @Override
+    public void fahren() {
+        System.out.println("Ich fahre auf 4 Räder und fahre recht schwer.");
+    }
+
+    @Override
+    public int fahren(String geschwindigkeit) {
+        return 10;
+    }
 }

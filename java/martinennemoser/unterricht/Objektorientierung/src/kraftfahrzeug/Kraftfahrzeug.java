@@ -1,6 +1,7 @@
 package kraftfahrzeug;
 
-public class Kraftfahrzeug {
+// extends Object kann auch weggelassen werden (weil alle Klassen implizit von Object erben)
+public abstract class Kraftfahrzeug extends Object {
     public String Name;
     private String Typencode;
 
@@ -28,9 +29,17 @@ public class Kraftfahrzeug {
         return this.Name;
     }
 
-    public void fahren() {
-        System.out.println("Fahren");
+    // Abstrakte Methode:
+    // 1. Methode hat keine Implementierung
+    // 2. Alle Klassen, die von Kraftfahrzeug ableiten, müssen fahren implementieren
+    public abstract void fahren(int beschleunigung);
 
+    public abstract void fahren();
+
+    // überladene Methode
+    public int fahren(String geschwindigkeit) {
+        System.out.println("Ich fahre " + geschwindigkeit);
+        return 0;
     }
 
     public void benzinTanken()  {
