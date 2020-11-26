@@ -1,6 +1,6 @@
 package kraftfahrzeug;
 
-public class ElektroLKW extends LKW implements Elektro{
+public class ElektroLKW extends LKW implements Elektro {
 
     public ElektroLKW() {
         super("MAN");

@@ -32,4 +32,10 @@ public class ElektroPKW extends PKW implements Elektro {
     public void stromLaden(int kwh) {
         System.out.println("Auto wird geladen.");
     }
+
+    @Override
+    public void kapazitaetMessen() {
+        System.out.println("Messe Kapazität in Elektro PKW.");
+    }
+
 }

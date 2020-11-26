@@ -31,6 +31,7 @@ public class Main {
 
         ElektroLKW elektrischerLKW = new ElektroLKW();
         elektrischerLKW.fahren();
+        elektrischerLKW.kapazitaetMessen();
 
         VerbrennerLKW man = new VerbrennerLKW("Scania");
         man.fahren();
@@ -58,6 +59,7 @@ public class Main {
 
         ElektroPKW porsche = new ElektroPKW("Tesla");
         porsche.stromLaden(60);
+        porsche.kapazitaetMessen();
 
 
 
