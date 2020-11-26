@@ -27,6 +27,14 @@ public class Person {
 
     // Methoden
 
+    public void betrittFlughafen() {
+        if(Status == PersonStatus.AUSSERHALB_DES_FLUGHAFENS) {
+            Status = PersonStatus.IST_IN_HALLE;
+        } else {
+            System.out.println("Person kann den Flughafen nicht betreten.");
+        }
+    }
+
     public void kauftGeschenk() {
         if(Status == PersonStatus.IST_IN_HALLE || Status == PersonStatus.SITZT_IM_CAFE) {
             Status = PersonStatus.KAUFT_GESCHENK;

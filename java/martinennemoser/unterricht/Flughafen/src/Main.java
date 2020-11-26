@@ -24,5 +24,9 @@ public class Main {
 
         Kleinflugzeug cessna = new Kleinflugzeug();
         cessna.reifenAusfahren();
+
+        Passagiermaschine boing737 = new Passagiermaschine();
+        boing737.einladen(7);
+        boing737.ausladen(9);
     }
 }
