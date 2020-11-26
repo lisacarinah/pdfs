@@ -42,11 +42,6 @@ public abstract class Kraftfahrzeug extends Object {
         return 0;
     }
 
-    public void benzinTanken()  {
-        System.out.println("Tanke Benzin");
-
-    }
-
     public void putzen() {
         System.out.println("Fahren");
     }

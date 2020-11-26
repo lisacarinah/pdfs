@@ -21,5 +21,8 @@ public class Main {
 
         // Flughafen Wien
         // mehrere Flugzeuge mit mehreren Presonen
+
+        Kleinflugzeug cessna = new Kleinflugzeug();
+        cessna.reifenAusfahren();
     }
 }

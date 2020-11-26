@@ -4,12 +4,14 @@ import obst.Korb;
 import obst.Obst;
 import obst.Tisch;
 
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
+    public static void kraftStoffAuftanken(Verbrenner verbrenner, int liter) {
+        verbrenner.kraftstoffTanken(liter);
+    }
 
     public static void main(String[] args) {
         // ####### BEISPIEL KRAFTFAHRZEUG (Vererbung) ################
@@ -27,22 +29,23 @@ public class Main {
 //        Kraftfahrzeug kraftfahrzeug2 = new Kraftfahrzeug(10);
 //        kraftfahrzeug2.warten();
 
-        ElektrischerLKW elektrischerLKW = new ElektrischerLKW();
+        ElektroLKW elektrischerLKW = new ElektroLKW();
         elektrischerLKW.fahren();
 
-        LKW man = new LKW("man");
+        VerbrennerLKW man = new VerbrennerLKW("Scania");
         man.fahren();
 
-        PKW vw = new PKW("vw");
+        VerbrennerPKW vw = new VerbrennerPKW("Audi A6");
         vw.fahren();
 
-        PKW bmw = new PKW("bmw");
+        ElektroPKW bmw = new ElektroPKW("BMW");
         bmw.fahren();
         // Geht nicht, da Typencode protected
         // System.out.println("Der Typencode unseres BMWs lautet " + bmw.Typencode);
 
-        ElektroAuto teslaModelS = new ElektroAuto();
+        ElektroPKW teslaModelS = new ElektroPKW("Tesla Model S");
         teslaModelS.fahren(1);
+        teslaModelS.stromLaden(2);
         ArrayList<Kraftfahrzeug> fuhrPark = new ArrayList<Kraftfahrzeug>();
         fuhrPark.add(man);
         fuhrPark.add(vw);
@@ -51,17 +54,10 @@ public class Main {
         for(int i = 0; i < fuhrPark.size(); i++) {
             // Gib Name aus
             System.out.println(fuhrPark.get(i));
-
-            // Betanke Kraftfahrzeug
-            Kraftfahrzeug fahrzeug = fuhrPark.get(i);
-
-            if(!(fahrzeug instanceof ElektroAuto)) {
-                fahrzeug.benzinTanken();
-            }
         }
 
-        ElektroAuto porsche = new ElektroAuto();
-        porsche.benzinTanken();
+        ElektroPKW porsche = new ElektroPKW("Tesla");
+        porsche.stromLaden(60);
 
 
 
@@ -138,5 +134,31 @@ public class Main {
         kaffeemaschine.stromZustand(true);
         kaffeemaschine.kaffeeMachen(Kaffeemaschine.KNOPF.SCHWARZ);
         kaffeemaschine.kaffeeEntnehmen();
+
+        VerbrennerPKW pkw = new VerbrennerPKW("pkw");
+        pkw.reisegepaeckLaden();
+        VerbrennerLKW lkw = new VerbrennerLKW("lkw");
+        //ElektroPKW elektroPKW = new ElektroPKW("elektorPKW");
+        kraftStoffAuftanken(pkw, 50);
+        kraftStoffAuftanken(lkw, 60);
+        //kraftStoffAuftanken(elektroPKW, 60);
+
+        ///// Polymorphie und Typcasting:
+        pkw.kraftstoffTanken(50);
+        pkw.reisegepaeckLaden();
+
+        Verbrenner verbrenner;
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        if (input.equals("a")) {
+            verbrenner = pkw;
+        } else {
+            verbrenner = lkw;
+        }
+
+        verbrenner.kraftstoffTanken(23);
+        VerbrennerPKW zurueck = (VerbrennerPKW) verbrenner;
+        ((VerbrennerPKW)  verbrenner).reisegepaeckLaden();
+
     }
 }

@@ -1,6 +1,6 @@
 package kraftfahrzeug;
 
-public class PKW extends Kraftfahrzeug {
+public abstract class PKW extends Kraftfahrzeug {
     // Überschreibt Name von Elternklasse
     private String Name;
     public PKW(String name) {
@@ -18,5 +18,9 @@ public class PKW extends Kraftfahrzeug {
     @Override
     public void fahren(int x) {
 
+    }
+
+    public void passagierEinsteigen() {
+        System.out.println("Passgier ist eingestiegen.");
     }
 }

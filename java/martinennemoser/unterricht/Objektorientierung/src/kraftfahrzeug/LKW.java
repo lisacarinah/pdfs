@@ -1,7 +1,7 @@
 package kraftfahrzeug;
 
 // Klasse LWK erweitert (erbt von) Kraftfahrzeug
-public class LKW extends Kraftfahrzeug {
+public abstract class LKW extends Kraftfahrzeug {
     public LKW(String name) {
         super(name, "984");
         //super.Typencode = "984";
@@ -25,4 +25,10 @@ public class LKW extends Kraftfahrzeug {
     public int fahren(String geschwindigkeit) {
         return 10;
     }
+
+    public void beladen() {
+        System.out.println("Lade Ladegut in den LKW.");
+    }
+
+
 }
