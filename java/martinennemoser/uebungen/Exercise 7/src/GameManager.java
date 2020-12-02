@@ -99,6 +99,8 @@ public class GameManager {
             return false;
         }
 
+        selectedShip.setIsAvailable(true);
+
         return true;
 
     }

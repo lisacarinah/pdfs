@@ -14,4 +14,9 @@ public abstract class Ship {
     public int getSize() { return size; }
     public boolean getIsAvailable() { return isAvailable; }
 
+    // SETTER methoden
+    public void setIsAvailable(boolean val) {
+        this.isAvailable = val;
+    }
+
 }
