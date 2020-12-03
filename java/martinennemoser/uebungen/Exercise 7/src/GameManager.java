@@ -2,8 +2,8 @@ import java.util.*;
 
 public class GameManager {
 
-    private Board board = new Board();
-    private Ship[] ships = new Ship[5];
+    private final Board board = new Board();
+    private final Ship[] ships = new Ship[5];
 
     private Ship selectedShip = null;
     private int selRow = -1;
@@ -67,12 +67,6 @@ public class GameManager {
 
         if(!isAvailable) {
             System.out.println("This ship is not available anymore.");
-            return false;
-        }
-
-
-        if(ship < 0 || ship > shipCount) {
-            System.out.println("Invalid input!\n");
             return false;
         }
 
@@ -155,6 +149,21 @@ public class GameManager {
             }
         }
         return availableShips;
+    }
+
+    private boolean isSelectedShipAvailable() {
+        Ship[] availableShips = remainingShips();
+        for(int i = 0; i < availableShips.length; i++) {
+            if(selectedShip.getId() == availableShips[i].getId()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // alternative solution
+    private boolean isSelectedShipAvailable1() {
+        return selectedShip.getIsAvailable();
     }
 
 }
