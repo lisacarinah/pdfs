@@ -63,6 +63,12 @@ public class GameManager {
             return false;
         }
         selectedShip = ships[ship];
+        boolean isAvailable = isSelectedShipAvailable();
+
+        if(!isAvailable) {
+            System.out.println("This ship is not available anymore.");
+            return false;
+        }
 
 
         if(ship < 0 || ship > shipCount) {
