@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class GameManager {
 
@@ -11,11 +11,11 @@ public class GameManager {
     private int selDirection = -1;
 
     public void createShips() {
-        ships[0] = new Boat(0, 2);
-        ships[1] = new Carrier(1, 3);
-        ships[2] = new Submarine(2, 4);
-        ships[3] = new Cruiser(3, 5);
-        ships[4] = new Destroyer(4, 6);
+        ships[0] = new Boat(0, 2, "Boat");
+        ships[1] = new Carrier(1, 3, "Carrier");
+        ships[2] = new Submarine(2, 4, "Submarine");
+        ships[3] = new Cruiser(3, 5, "Cruiser");
+        ships[4] = new Destroyer(4, 6, "Destroyer");
     }
 
     public void gameLoop() {
@@ -69,8 +69,9 @@ public class GameManager {
             return false;
         }
 
-        System.out.print("Choose the starting position (e.g. A4): ");
+        System.out.print("Choose the starting row (A-J): ");
         int row = in.next().charAt(0) - 65;
+        System.out.print("Choose the starting row (1-10): ");
         int column = in.nextInt() - 1;
 
         if(column < 0 || column > Board.COLUMNS - 1 || row < 0 || row > Board.ROWS - 1) {
@@ -99,23 +100,19 @@ public class GameManager {
             return false;
         }
 
-        selectedShip.setIsAvailable(true);
+        selectedShip.setIsAvailable(false);
 
         return true;
 
     }
 
     private void displayRemainingShips() {
-        System.out.println("Your remaining ships are:");
-        for(int i = 0; i < this.remainingShips().length; i++) {
-            //todo
-            //System.out.print(i + ": " + Ships.values()[i] + "("+ Ships.values()[i].getSize() + ") ");
-        }
-        System.out.println();
+        // todo
     }
 
     private Ship[] remainingShips() {
-        //todo
+        // todo
         return null;
     }
+
 }
