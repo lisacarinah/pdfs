@@ -29,6 +29,7 @@ public class GameManager {
                 placeShips();
             }
         }
+        board.displayGrid();
     }
 
     private void placeShips() {
@@ -107,12 +108,47 @@ public class GameManager {
     }
 
     private void displayRemainingShips() {
-        // todo
+        for(int i = 0; i < remainingShips().length; i++) {
+            Ship[] ships = remainingShips();
+            System.out.println(ships[i].getId() + ": " +  ships[i].getName() + "("+ ships[i].getSize() + ") ");
+        }
     }
 
     private Ship[] remainingShips() {
-        // todo
-        return null;
+        ArrayList<Ship> availableShips = new ArrayList<Ship>();
+
+        for(int i = 0; i < ships.length; i++) {
+            if(ships[i].getIsAvailable()) {
+                availableShips.add(ships[i]);
+            }
+        }
+
+        // iteriere alle schiffe und schaue nach, welche schiffe isAvailable==True haben
+        // und die, die isAvailable==True haben in ein Array speichern
+        Ship[] x = availableShips.toArray(new Ship[0]);
+        return x;
+    }
+
+    // alternative solution
+    private Ship[] remainingShips2() {
+        Ship[] availableShips;
+
+        int counter = 0;
+        for(int i = 0; i < ships.length; i++) {
+            if(ships[i].getIsAvailable()) {
+                counter++;
+            }
+        }
+        availableShips = new Ship[counter];
+
+        counter = 0;
+        for(int i = 0; i < ships.length; i++) {
+            if(ships[i].getIsAvailable()) {
+                availableShips[counter] = ships[i];
+                counter++;
+            }
+        }
+        return availableShips;
     }
 
 }
