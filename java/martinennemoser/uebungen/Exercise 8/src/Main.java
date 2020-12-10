@@ -3,7 +3,7 @@ public class Main {
         Calculator calculator = new Calculator();
         Scalar a = new Scalar(5);
         Scalar b = new Scalar(9);
-        System.out.println("Salar a's length+" + a.getLength());
+        System.out.println("Scalar a's length+" + a.getLength());
         calculator.add(a, b);
         calculator.subtract(a, b);
         calculator.multiply(a, b);
