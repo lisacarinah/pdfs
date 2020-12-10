@@ -24,4 +24,9 @@ public class Scalar extends Type {
     public Type divide(Type b) {
         return new Scalar((double) this.getValue() / (double) b.getValue());
     }
+
+    @Override
+    public String getLength() {
+        return "1";
+    }
 }

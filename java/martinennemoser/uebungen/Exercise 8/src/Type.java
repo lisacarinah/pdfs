@@ -17,4 +17,7 @@ public abstract class Type implements Equatable{
     public String toString() {
         return String.valueOf(this.value);
     }
+
+    public abstract String getLength();
+
 }
