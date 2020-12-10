@@ -1,15 +1,15 @@
 public abstract class Type implements Equatable{
-    private double value;
+    protected Object value;
 
-    public Type(double value) {
+    public Type(Object value) {
         this.value = value;
     }
 
-    public double getValue() {
+    public Object getValue() {
         return value;
     }
 
-    public void setValue(double value) {
+    public void setValue(Object value) {
         this.value = value;
     }
 
