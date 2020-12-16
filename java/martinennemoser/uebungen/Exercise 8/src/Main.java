@@ -28,5 +28,12 @@ public class Main {
         VectorDynamic yv1 = new VectorDynamic(new double[]{4, 5, 6});
         calculator.multiply(xv1, yv1);
 
+        Matrix A = new Matrix(new double[][]{{1, 2, 3}, {4, 5, 6}});
+        Matrix B = new Matrix(new double[][]{{1, 2, 3}, {4, 5, 6}});
+        System.out.println("A");
+        System.out.println(A);
+        System.out.println("B");
+        System.out.println(B);
+
     }
 }
