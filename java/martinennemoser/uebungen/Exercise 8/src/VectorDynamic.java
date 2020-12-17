@@ -80,12 +80,13 @@ public class VectorDynamic extends Type {
     // Assozativgesetz von Addition: (a+b)+c = a+(b+c) => giltet
     // Assozativgesetz von Subtraktion: (a-b)-c = a-(b-c) == a-(b-c) = (a-b)+c => giltet nicht
     // Assozativgesetz von Multiplikation: (a*b)*c = a*(b*c) => giltet
-    // Assozaitvgesetz von Divison: (a/b)/c = a/(b/c) => giltet nicht
+    // Assozativgesetz von Divison: (a/b)/c = a/(b/c) => giltet nicht
 
     // Distributivgesetz von Addition: a+(b*c*d) = (a+b) * (a+c) * (a+d) => giltet nicht
     // Distributivgesetz von Subtraktion: a-(b*c*d) = (a-b) * (a-c) * (a-d) => giltet nicht
     // Distributivgesetz Multiplikation: a*(b+c+d) = (a*b) + (a*c) + (a*d) => giltet
     // Distributivgesetz Division: a/(b+c+d) = (a/b) + (a/c) + (a/d) => giltet nicht
+
 
 
     @Override
