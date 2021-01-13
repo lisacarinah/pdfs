@@ -1,3 +1,5 @@
+package src;
+
 public class Main {
 
     private static void equals(int a, int b) throws NotMatchingException {
