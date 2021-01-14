@@ -14,9 +14,9 @@ public class Main {
         account.deposit(50);
         account.withdraw(30);
 
-        Main.equals(account.amount, 320);
+        Main.equals(account.getAmount(), 320);
         account.deposit(100);
-        Main.equals(account.amount, 420);
+        Main.equals(account.getAmount(), 420);
 
         try {
             account.withdraw(500);
@@ -25,7 +25,7 @@ public class Main {
             Main.equals(ex.overdrawAmount, 80);
             System.out.println("The overdrawing amount of + " + ex.overdrawAmount + "€ is not possible");
         }
-        Main.equals(account.amount, 420);
+        Main.equals(account.getAmount(), 420);
 
         try {
             account.withdraw(700);
@@ -35,6 +35,17 @@ public class Main {
             System.out.println("The overdrawing amount of + " + ex.overdrawAmount + "€ is not possible");
         }
 
+        /// Bitcoins
+        BitcoinAccount bitcoinAccount = new BitcoinAccount();
+        bitcoinAccount.buyBitcoins(5);
+        try {
+            bitcoinAccount.sellBitcoins(8);
+        }
+        catch (InvalidWithdrawException ex) {
+            System.out.println(ex.toString());
+            Main.equals(ex.overdrawAmount, 3);
+            System.out.println(ex.overdrawAmount + " bitcoins are not available.");
+        }
         System.out.println("Program works as expected!");
      }
 }

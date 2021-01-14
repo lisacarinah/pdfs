@@ -25,6 +25,8 @@ public class Cell implements Cloneable {
     public void setState(STATE state) {
         this.state = state;
         if(state == STATE.ALIVE)
+            // #RRGGBB
+            // 0 -> f
             graphicsContext2D.setFill(Color.valueOf("#ff0000"));
         else
             graphicsContext2D.setFill(Color.valueOf("#ffffff"));

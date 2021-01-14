@@ -12,13 +12,14 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.util.Random;
 
 public class GameOfLife extends Application {
     // cells array
     Cell[][] cells;
     // Button for pausing the animation
-    Button playButton = new Button("Pause");
+    public static Button playButton = new Button("Pause");
     public static void main(String[] args) {
         launch(args);
     }
@@ -82,7 +83,7 @@ public class GameOfLife extends Application {
                 try {
                     if(GameOfLife.this.playButton.getText().equals("Pause")) {
                         // TODO replace Blinking with your own implementation
-                        GameOfLife.this.cells = new Blinking().nextState(GameOfLife.this.cells);
+                        GameOfLife.this.cells = new GoLAlgorithm().nextState(GameOfLife.this.cells);
                         Thread.sleep(500);
                     }
                 } catch (InterruptedException e) {
@@ -95,14 +96,30 @@ public class GameOfLife extends Application {
     }
 
     private void createActionListeners() {
-        this.playButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                if(GameOfLife.this.playButton.getText().equals("Pause"))
-                    GameOfLife.this.playButton.setText("Continue");
+        // 1. Alternativ: Objekt mit Klasse
+//        PauseButtonEventHandler pauseButtonEventHandler = new PauseButtonEventHandler();
+//        this.playButton.setOnAction(pauseButtonEventHandler);
+
+        // 2. Alternative: Lambda Expression
+//        this.playButton.setOnAction((ActionEvent event) -> {
+//            if(GameOfLife.playButton.getText().equals("Pause"))
+//                GameOfLife.playButton.setText("Continue");
+//            else
+//                GameOfLife.playButton.setText("Pause");
+//        });
+
+
+        EventHandler<ActionEvent> pauseButtonEventHandler = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                if(GameOfLife.playButton.getText().equals("Pause"))
+                    GameOfLife.playButton.setText("Continue");
                 else
-                    GameOfLife.this.playButton.setText("Pause");
+                    GameOfLife.playButton.setText("Pause");
             }
-        });
+        };
+        this.playButton.setOnAction(pauseButtonEventHandler);
+
     }
 
 }
