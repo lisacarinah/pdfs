@@ -12,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 import java.util.Random;
 
 public class GameOfLife extends Application {
@@ -57,15 +56,25 @@ public class GameOfLife extends Application {
 
     private void initCellState() {
         // Note: If you want to have "new" sequences then remove the seed argument
-        Random rand = new Random(1);
+
+        // Initialisierung für GoLPolicy
+//        Random rand = new Random(1);
+//        for(int i = 0; i < this.cells.length; i++)
+//            for(int j = 0; j < this.cells[0].length; j++) {
+//                int v = rand.nextInt(2);
+//                if(v == 0)
+//                    cells[i][j].setState(Cell.STATE.ALIVE);
+//                else
+//                    cells[i][j].setState(Cell.STATE.DEAD);
+//            }
+
+
         for(int i = 0; i < this.cells.length; i++)
             for(int j = 0; j < this.cells[0].length; j++) {
-                int v = rand.nextInt(2);
-                if(v == 0)
-                    cells[i][j].setState(Cell.STATE.ALIVE);
-                else
-                    cells[i][j].setState(Cell.STATE.DEAD);
+                cells[i][j].setState(Cell.STATE.DEAD);
             }
+
+        cells[49][49].setState(Cell.STATE.ALIVE);
     }
 
     private void createCells(Canvas canvas, int gridSize) {
@@ -83,7 +92,7 @@ public class GameOfLife extends Application {
                 try {
                     if(GameOfLife.this.playButton.getText().equals("Pause")) {
                         // TODO replace Blinking with your own implementation
-                        GameOfLife.this.cells = new GoLAlgorithm().nextState(GameOfLife.this.cells);
+                        GameOfLife.this.cells = new SquarePump().nextState(GameOfLife.this.cells);
                         Thread.sleep(500);
                     }
                 } catch (InterruptedException e) {
@@ -96,30 +105,14 @@ public class GameOfLife extends Application {
     }
 
     private void createActionListeners() {
-        // 1. Alternativ: Objekt mit Klasse
-//        PauseButtonEventHandler pauseButtonEventHandler = new PauseButtonEventHandler();
-//        this.playButton.setOnAction(pauseButtonEventHandler);
-
-        // 2. Alternative: Lambda Expression
-//        this.playButton.setOnAction((ActionEvent event) -> {
-//            if(GameOfLife.playButton.getText().equals("Pause"))
-//                GameOfLife.playButton.setText("Continue");
-//            else
-//                GameOfLife.playButton.setText("Pause");
-//        });
-
-
-        EventHandler<ActionEvent> pauseButtonEventHandler = new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                if(GameOfLife.playButton.getText().equals("Pause"))
-                    GameOfLife.playButton.setText("Continue");
+        this.playButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                if(GameOfLife.this.playButton.getText().equals("Pause"))
+                    GameOfLife.this.playButton.setText("Continue");
                 else
-                    GameOfLife.playButton.setText("Pause");
+                    GameOfLife.this.playButton.setText("Pause");
             }
-        };
-        this.playButton.setOnAction(pauseButtonEventHandler);
-
+        });
     }
 
 }

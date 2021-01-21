@@ -43,4 +43,12 @@ public class Cell implements Cloneable {
         c.setState(this.state);
         return c;
     }
+
+    public int getPosX() {
+        return this.posX;
+    }
+
+    public int getPosY() {
+        return this.posY;
+    }
 }
